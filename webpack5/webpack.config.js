@@ -59,16 +59,16 @@ module.exports = {
     }
   },
   plugins: [
-    // new webpack.NormalModuleReplacementPlugin(/obj/, function (resource) {
+    new webpack.NormalModuleReplacementPlugin(/obj/, function (resource) {
 
-    //   // if (resource.request.includes('dropdown')) {
-    //   //   console.log('resource: ', resource.request)
-    //   // }
-    //   // if (resource.createData && resource.createData.request) {
-    //   //   resource.request = resource.request.replace('obj', 'alias/obj')
-    //   // }
-    //   resource.request = resource.request.replace('obj', 'alias/obj')
+      if (resource.request.includes('dropdown')) {
+        console.log('resource: ', resource.request)
+      }
+      if (resource.createData && resource.createData.resource) {
+        resource.resource = resource.request.replace('obj', 'alias/alias')
+      }
+      resource.request = resource.request.replace('obj', 'alias/alias')
       
-    // }),
+    }),
   ]
 }

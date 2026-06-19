@@ -2,9 +2,9 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './module/index.mjs'
+    index: './common/index.js'
   },
   output: {
-    path: path.resolve(process.cwd(), './distmodule')
+    path: path.resolve(process.cwd(), './distcommon')
   }
 }

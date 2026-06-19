@@ -20,13 +20,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./src/alias/obj.js":
-/*!**************************!*\
-  !*** ./src/alias/obj.js ***!
-  \**************************/
-/***/ (() => {
+/***/ "./src/alias/alias.js":
+/*!****************************!*\
+  !*** ./src/alias/alias.js ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, exports) {
 
-eval("\n\n//# sourceURL=webpack://webpack5/./src/alias/obj.js?");
+eval("const obj = {\n  a: 1\n};\nlet var1 = 101;\nlet var2 = 11;\nvar3 = 111;\n// module.exports = {\n//   obj,\n//   var1,\n//   var2\n// }\nexports.obj = obj;\nexports.var1 = var1;\nconsole.log(this);\nobj.b = 2;\nvar1 = 102;\n\n//# sourceURL=webpack://webpack5/./src/alias/alias.js?");
 
 /***/ }),
 
@@ -36,17 +36,7 @@ eval("\n\n//# sourceURL=webpack://webpack5/./src/alias/obj.js?");
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const img = __webpack_require__(/*! ./assets/test.png */ \"./src/assets/test.png\");\nconst { obj, var1 } = __webpack_require__(/*! ./obj */ \"./src/alias/obj.js\");\nconst test = __webpack_require__(/*! ./test/test */ \"./src/test/test.js\");\nconst img1 = img;\nconsole.log(var1);\nconsole.log(test);\nconsole.log(JSON.stringify(obj));\n\n//# sourceURL=webpack://webpack5/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/obj.js":
-/*!********************!*\
-  !*** ./src/obj.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, exports) => {
-
-eval("const obj = {\n  a: 1\n};\nlet var1 = 1;\nexports.obj = obj;\nexports.var1 = var1;\nobj.b = 2;\nvar1 = 2;\n\n//# sourceURL=webpack://webpack5/./src/obj.js?");
+eval("const img = __webpack_require__(/*! ./assets/test.png */ \"./src/assets/test.png\");\nconst { obj, var1 } = __webpack_require__(/*! ./obj */ \"./src/alias/alias.js\");\nconst test = __webpack_require__(/*! ./test/test */ \"./src/test/test.js\");\nconst img1 = img;\nconsole.log(var1);\nconsole.log(test);\nconsole.log(JSON.stringify(obj));\n\n//# sourceURL=webpack://webpack5/./src/index.js?");
 
 /***/ }),
 
@@ -56,7 +46,7 @@ eval("const obj = {\n  a: 1\n};\nlet var1 = 1;\nexports.obj = obj;\nexports.var1
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const { obj, var1 } = __webpack_require__(/*! ../obj */ \"./src/obj.js\");\nconsole.log(var1);\nmodule.exports = { test: 1 }\n\n//# sourceURL=webpack://webpack5/./src/test/test.js?");
+eval("const { obj, var1 } = __webpack_require__(/*! ../obj */ \"./src/alias/alias.js\");\nconsole.log(var1);\nmodule.exports = { test: 1 }\n\n//# sourceURL=webpack://webpack5/./src/test/test.js?");
 
 /***/ })
 
@@ -80,7 +70,7 @@ eval("const { obj, var1 } = __webpack_require__(/*! ../obj */ \"./src/obj.js\");
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;

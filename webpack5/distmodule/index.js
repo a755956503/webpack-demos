@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _obj
   \************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"obj\": () => (/* binding */ obj),\n/* harmony export */   \"var1\": () => (/* binding */ var1)\n/* harmony export */ });\nconst obj = {\n  a: 1\n};\nlet var1 = 1;\n\nobj.b = 2;\nvar1 = 2;\n\n//# sourceURL=webpack://webpack5/./module/obj.mjs?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"obj\": () => (/* binding */ obj),\n/* harmony export */   \"var1\": () => (/* binding */ var1),\n/* harmony export */   \"var2\": () => (/* binding */ var2)\n/* harmony export */ });\nconst obj = {\n  a: 1\n};\nlet var1 = 1;\nlet var2 = 1;\n\nconsole.log(undefined);\nobj.b = 2;\nvar1 = 2;\n\n//# sourceURL=webpack://webpack5/./module/obj.mjs?");
 
 /***/ })
 
